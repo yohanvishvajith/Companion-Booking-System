@@ -1,0 +1,369 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Companion Booking System
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .hidden {
+    display: none;
+   }
+  </style>
+  <script>
+   function toggleFilterOptions() {
+    const filterOptions = document.getElementById('filter-options');
+    filterOptions.classList.toggle('hidden');
+   }
+  </script>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <!-- Home Page -->
+  <header class="bg-blue-600 text-white p-6">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-3xl font-bold">
+     Companion Booking System
+    </h1>
+    <div class="flex space-x-4">
+     <button class="bg-white text-blue-600 px-4 py-2 rounded">
+      Explore Companions
+     </button>
+     <button class="bg-white text-blue-600 px-4 py-2 rounded" onclick="toggleFilterOptions()">
+      Filter Options
+     </button>
+    </div>
+   </div>
+  </header>
+  <div class="container mx-auto mt-4 hidden" id="filter-options">
+   <div class="bg-white p-4 rounded shadow">
+    <h3 class="text-xl font-bold mb-4">
+     Filter Options
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <div>
+      <label class="block text-gray-700">
+       Region
+      </label>
+      <select class="w-full p-2 border border-gray-300 rounded mt-2">
+       <option>
+        North America
+       </option>
+       <option>
+        Europe
+       </option>
+       <option>
+        Asia
+       </option>
+       <option>
+        Australia
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-gray-700">
+       Hair Color
+      </label>
+      <select class="w-full p-2 border border-gray-300 rounded mt-2">
+       <option>
+        Blonde
+       </option>
+       <option>
+        Brunette
+       </option>
+       <option>
+        Black
+       </option>
+       <option>
+        Red
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-gray-700">
+       Price Range
+      </label>
+      <input class="w-full p-2 border border-gray-300 rounded mt-2" placeholder="Enter price range" type="text"/>
+     </div>
+     <div>
+      <label class="block text-gray-700">
+       Eye Color
+      </label>
+      <select class="w-full p-2 border border-gray-300 rounded mt-2">
+       <option>
+        Blue
+       </option>
+       <option>
+        Brown
+       </option>
+       <option>
+        Green
+       </option>
+       <option>
+        Hazel
+       </option>
+      </select>
+     </div>
+    </div>
+   </div>
+  </div>
+  <section class="container mx-auto mt-8">
+   <h2 class="text-2xl font-bold mb-4">
+    Featured Companions
+   </h2>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white p-4 rounded shadow">
+     <img alt="Profile picture of a smiling woman with brown hair" class="w-full h-48 object-cover rounded" height="300" src="https://storage.googleapis.com/a1aa/image/M7K56qbaGmb6GRzaRSAUBqNE6VPpqnxUs3UqilP1q6m2vH9E.jpg" width="300"/>
+     <h3 class="text-xl font-bold mt-4">
+      Jane Doe
+     </h3>
+     <p class="text-gray-600">
+      Adventurous and Outgoing
+     </p>
+     <p class="text-gray-600">
+      Age: 28
+     </p>
+     <p class="text-yellow-500">
+      ★★★★☆
+     </p>
+     <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+      View Profile
+     </button>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+     <img alt="Profile picture of a man with short black hair and glasses" class="w-full h-48 object-cover rounded" height="300" src="https://storage.googleapis.com/a1aa/image/IB5LjZXTzw4NKZJquE3gsesMgelTasCW2j5506uf1Apwe7RPB.jpg" width="300"/>
+     <h3 class="text-xl font-bold mt-4">
+      John Smith
+     </h3>
+     <p class="text-gray-600">
+      Friendly and Talkative
+     </p>
+     <p class="text-gray-600">
+      Age: 32
+     </p>
+     <p class="text-yellow-500">
+      ★★★★☆
+     </p>
+     <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+      View Profile
+     </button>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+     <img alt="Profile picture of a woman with blonde hair and a bright smile" class="w-full h-48 object-cover rounded" height="300" src="https://storage.googleapis.com/a1aa/image/Bf2X3GWKdDSQHifOp3QoKtrsdihZzoLAJL9an6OSBrtZf9onA.jpg" width="300"/>
+     <h3 class="text-xl font-bold mt-4">
+      Emily Johnson
+     </h3>
+     <p class="text-gray-600">
+      Energetic and Fun-loving
+     </p>
+     <p class="text-gray-600">
+      Age: 25
+     </p>
+     <p class="text-yellow-500">
+      ★★★★★
+     </p>
+     <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+      View Profile
+     </button>
+    </div>
+   </div>
+  </section>
+  <section class="container mx-auto mt-8">
+   <h2 class="text-2xl font-bold mb-4">
+    Search Companions
+   </h2>
+   <div class="bg-white p-4 rounded shadow">
+    <input class="w-full p-2 border border-gray-300 rounded" placeholder="Search by location, availability, activity type..." type="text"/>
+   </div>
+  </section>
+  <!-- Companion Listing Page -->
+  <section class="container mx-auto mt-8">
+   <h2 class="text-2xl font-bold mb-4">
+    Companion Listings
+   </h2>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white p-4 rounded shadow">
+     <img alt="Profile picture of a smiling woman with brown hair" class="w-full h-48 object-cover rounded" height="300" src="https://storage.googleapis.com/a1aa/image/M7K56qbaGmb6GRzaRSAUBqNE6VPpqnxUs3UqilP1q6m2vH9E.jpg" width="300"/>
+     <h3 class="text-xl font-bold mt-4">
+      Jane Doe
+     </h3>
+     <p class="text-gray-600">
+      Adventurous and Outgoing
+     </p>
+     <p class="text-gray-600">
+      Age: 28
+     </p>
+     <p class="text-yellow-500">
+      ★★★★☆
+     </p>
+     <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+      View Profile
+     </button>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+     <img alt="Profile picture of a man with short black hair and glasses" class="w-full h-48 object-cover rounded" height="300" src="https://storage.googleapis.com/a1aa/image/IB5LjZXTzw4NKZJquE3gsesMgelTasCW2j5506uf1Apwe7RPB.jpg" width="300"/>
+     <h3 class="text-xl font-bold mt-4">
+      John Smith
+     </h3>
+     <p class="text-gray-600">
+      Friendly and Talkative
+     </p>
+     <p class="text-gray-600">
+      Age: 32
+     </p>
+     <p class="text-yellow-500">
+      ★★★★☆
+     </p>
+     <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+      View Profile
+     </button>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+     <img alt="Profile picture of a woman with blonde hair and a bright smile" class="w-full h-48 object-cover rounded" height="300" src="https://storage.googleapis.com/a1aa/image/Bf2X3GWKdDSQHifOp3QoKtrsdihZzoLAJL9an6OSBrtZf9onA.jpg" width="300"/>
+     <h3 class="text-xl font-bold mt-4">
+      Emily Johnson
+     </h3>
+     <p class="text-gray-600">
+      Energetic and Fun-loving
+     </p>
+     <p class="text-gray-600">
+      Age: 25
+     </p>
+     <p class="text-yellow-500">
+      ★★★★★
+     </p>
+     <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+      View Profile
+     </button>
+    </div>
+   </div>
+  </section>
+  <!-- Profile Details Page -->
+  <section class="container mx-auto mt-8">
+   <div class="bg-white p-6 rounded shadow">
+    <div class="flex flex-col md:flex-row">
+     <img alt="Full-size profile picture of a smiling woman with brown hair" class="w-full md:w-1/2 h-auto rounded" height="600" src="https://storage.googleapis.com/a1aa/image/kXFmrvAtMxoJBtdkUofSqg807rofDAM2OuHkLNYz1EzWf9onA.jpg" width="600"/>
+     <div class="md:ml-6 mt-4 md:mt-0">
+      <h2 class="text-3xl font-bold">
+       Jane Doe
+      </h2>
+      <p class="text-gray-600 mt-2">
+       Adventurous and Outgoing
+      </p>
+      <p class="text-gray-600 mt-2">
+       Age: 28
+      </p>
+      <p class="text-gray-600 mt-2">
+       Hobbies: Hiking, Traveling, Reading
+      </p>
+      <p class="text-gray-600 mt-2">
+       Personality Traits: Friendly, Energetic, Fun-loving
+      </p>
+      <p class="text-gray-600 mt-2">
+       Availability: Weekends
+      </p>
+      <p class="text-yellow-500 mt-2">
+       ★★★★☆
+      </p>
+      <p class="text-gray-600 mt-2">
+       Pricing: $50/hour, $300/day
+      </p>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+       Book Now
+      </button>
+     </div>
+    </div>
+    <div class="mt-8">
+     <h3 class="text-2xl font-bold">
+      Reviews
+     </h3>
+     <div class="mt-4">
+      <p class="text-gray-600">
+       "Jane was an amazing companion! Very friendly and outgoing." - ★★★★☆
+      </p>
+      <p class="text-gray-600 mt-2">
+       "Had a great time hiking with Jane. Highly recommend!" - ★★★★★
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Booking System -->
+  <section class="container mx-auto mt-8">
+   <div class="bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4">
+     Book a Companion
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <div>
+      <label class="block text-gray-700">
+       Date and Time
+      </label>
+      <input class="w-full p-2 border border-gray-300 rounded mt-2" type="datetime-local"/>
+     </div>
+     <div>
+      <label class="block text-gray-700">
+       Location
+      </label>
+      <input class="w-full p-2 border border-gray-300 rounded mt-2" placeholder="Enter meeting location" type="text"/>
+     </div>
+    </div>
+    <div class="mt-4">
+     <label class="block text-gray-700">
+      Duration (hours)
+     </label>
+     <input class="w-full p-2 border border-gray-300 rounded mt-2" placeholder="Enter duration" type="number"/>
+    </div>
+    <div class="mt-4">
+     <p class="text-gray-700">
+      Total Price: $
+      <span id="total-price">
+       0
+      </span>
+     </p>
+    </div>
+    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+     Confirm Booking
+    </button>
+   </div>
+  </section>
+  <!-- Admin Panel -->
+  <section class="container mx-auto mt-8">
+   <div class="bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4">
+     Admin Panel
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <div>
+      <h3 class="text-xl font-bold">
+       Manage Companions
+      </h3>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+       Add Companion
+      </button>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+       Update Companion
+      </button>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+       Remove Companion
+      </button>
+     </div>
+     <div>
+      <h3 class="text-xl font-bold">
+       Manage Bookings
+      </h3>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+       View Bookings
+      </button>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+       Manage Feedback
+      </button>
+     </div>
+    </div>
+   </div>
+  </section>
+ </body>
+</html>
